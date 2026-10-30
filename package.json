@@ -1,0 +1,11 @@
+{
+  "name": "compendio-del-cristal",
+  "version": "1.0.0",
+  "description": "Compendio de personajes de Final Fantasy con la UI de FFVII Remake, usando moogleAPI.",
+  "type": "module",
+  "scripts": {
+    "inicio": "node --env-file-if-exists=.env servidor.js"
+  },
+  "engines": { "node": ">=22.9" },
+  "license": "MIT"
+}

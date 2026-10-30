@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compendio del Cristal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="encabezado">
+    <h1 class="titulo">Compendio del Cristal</h1>
+    <nav class="selector-juego" aria-label="Juego">
+      <button id="juego-anterior" class="tecla" aria-label="Juego anterior (tecla Q)">L2 «</button>
+      <span id="juego-actual" aria-live="polite"></span>
+      <button id="juego-siguiente" class="tecla" aria-label="Juego siguiente (tecla E)">» R2</button>
+      <button id="musica" class="tecla musica" aria-pressed="false">♪ Música: no</button>
+    </nav>
+  </header>
+
+  <main class="menu">
+    <div class="lateral" aria-hidden="true">Personajes &amp; Arte</div>
+
+    <section class="columna-lista">
+      <div class="pestanas" role="tablist">
+        <button role="tab" data-modo="destacados" aria-selected="true">Principales</button>
+        <button role="tab" data-modo="todos" aria-selected="false">Todos</button>
+        <button role="tab" data-modo="arte" aria-selected="false">Arte</button>
+      </div>
+      <input id="busqueda" type="search" placeholder="Buscar personaje" aria-label="Buscar personaje" autocomplete="off">
+      <ul id="lista" class="lista" role="listbox" aria-label="Personajes"></ul>
+    </section>
+
+    <section id="detalle" class="detalle" aria-live="polite"></section>
+
+    <div id="logo-juego" class="logo-juego"><img alt=""></div>
+  </main>
+
+  <footer class="pie">
+    <span id="estado">Listo</span>
+    <span>↑ ↓ elegir · Q / E cambiar juego · Datos: moogleAPI (fan project, no afiliado a Square Enix)</span>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
